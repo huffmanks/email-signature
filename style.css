@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input,
+select {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.name {
+  color: #8a6e4b;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.contact {
+  font-size: 0.85rem;
+}
+
+.address {
+  color: #8a6e4b;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  input,
+  select {
+    font-size: 0.85rem;
+    padding-left: 0rem;
+  }
+}
