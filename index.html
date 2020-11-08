@@ -8,6 +8,28 @@
     <title>Email Signature</title>
   </head>
   <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="https://www.wofford.edu/"
+            ><img
+              src="https://www.wofford.edu/Wofford.edu/Images/development/logo.svg"
+              alt="Wofford logo"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="https://www.wofford.edu/about">About</a></li>
+          <li><a href="https://www.wofford.edu/academics">Academics</a></li>
+          <li><a href="https://www.wofford.edu/admission">Admission</a></li>
+          <li>
+            <a href="https://www.wofford.edu/student-experiences"
+              >Student Experiences</a
+            >
+          </li>
+          <li><a href="https://woffordterriers.com/">Athletics</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="container">
       <h1>Email Signature</h1>
 
@@ -29,121 +51,130 @@
         will need to be added or updated on each device from which you wish to
         use it.
       </p>
-      <form id="form" class="form">
-        <div class="form-group">
-          <label for="fullName">
-            <input type="text" id="fullName" placeholder="name"
-          /></label>
+      <form id="form">
+        <label>Name</label>
+        <input
+          type="text"
+          id="fullName"
+          class="input"
+          placeholder="Ben Wofford"
+        />
+
+        <label>Title (Multiple titles on separate lines.)</label>
+        <textarea
+          id="title"
+          class="input"
+          placeholder="Professor of Biology"
+        ></textarea>
+
+        <label>Email</label>
+        <input
+          type="email"
+          id="email"
+          class="input"
+          placeholder="username@wofford.edu"
+        />
+        <div>
+          *<em
+            >For phone, cell and fax numbers use hypens without parenthesis.</em
+          >
         </div>
-        <div class="form-group">
-          <label for="title">
-            <input type="text" id="title" placeholder="title"
-          /></label>
-        </div>
-        <div class="form-group">
-          <label for="email">
-            <input type="email" id="email" placeholder="email"
-          /></label>
-        </div>
-        <div class="form-group">
-          <label for="=phone">
-            <input type="text" id="phone" placeholder="phone"
-          /></label>
-        </div>
-        <div class="form-group">
-          <label for="web">
-            <input type="url" id="web" placeholder="web"
-          /></label>
-        </div>
-        <div class="form-group">
-          <label for="department">
-            <select id="department">
-              <option value="Academic Affairs">Academic Affairs</option>
-              <option value="Accounting, Business, and Finance"
-                >Accounting, Business, and Finance</option
-              >
-              <option value="Admission">Admission</option>
-              <option value="Advancement">Advancement</option>
-              <option value="Alumni">Alumni</option>
-              <option value="Art and Art History">Art and Art History</option>
-              <option value="Athletics">Athletics</option>
-              <option value="Biology">Biology</option>
-              <option value="Bookstore">Bookstore</option>
-              <option value="Business Office">Business Office</option>
-              <option value="Campus Ministry">Campus Ministry</option>
-              <option value="Campus Post Office">Campus Post Office</option>
-              <option value="Campus Safety">Campus Safety</option>
-              <option value="Career Center">Career Center</option>
-              <option value="Center for Community-Based Learning"
-                >Center for Community-Based Learning</option
-              >
-              <option value="Center for Innovation and Learning"
-                >Center for Innovation and Learning</option
-              >
-              <option value="Chemistry">Chemistry</option>
-              <option value="Computer Science">Computer Science</option>
-              <option value="Division of Campus Life and Student Development"
-                >Division of Campus Life and Student Development</option
-              >
-              <option value="Economics">Economics</option>
-              <option value="Education">Education</option>
-              <option value="English">English</option>
-              <option value="Environmental Studies"
-                >Environmental Studies</option
-              >
-              <option value="Facilities">Facilities</option>
-              <option value="Financial Aid">Financial Aid</option>
-              <option value="Government and International Affairs"
-                >Government and International Affairs</option
-              >
-              <option value="History">History</option>
-              <option value="Humanities">Humanities</option>
-              <option value="Institutional Research"
-                >Institutional Research</option
-              >
-              <option value="International Programs"
-                >International Programs</option
-              >
-              <option value="Liberty Fellowship">Liberty Fellowship</option>
-              <option value="Library">Library</option>
-              <option value="Lifelong Learning at Wofford"
-                >Lifelong Learning at Wofford</option
-              >
-              <option value="Mathematics">Mathematics</option>
-              <option value="Military Science">Military Science</option>
-              <option value="Modern Languages, Literatures, and Cultures"
-                >Modern Languages, Literatures, and Cultures</option
-              >
-              <option value="Music">Music</option>
-              <option value="Office of Entrepreneurship and Innovation"
-                >Office of Entrepreneurship and Innovation</option
-              >
-              <option value="Office of Marketing and Communications"
-                >Office of Marketing and Communications</option
-              >
-              <option value="Office of the President"
-                >Office of the President</option
-              >
-              <option value="Office of the Provost"
-                >Office of the Provost</option
-              >
-              <option value="Office of the Registrar"
-                >Office of the Registrar</option
-              >
-              <option value="Philosophy">Philosophy</option>
-              <option value="Physics">Physics</option>
-              <option value="Psychology">Psychology</option>
-              <option value="Religion">Religion</option>
-              <option value="Sociology and Anthropology"
-                >Sociology and Anthropology</option
-              >
-              <option value="Theatre">Theatre</option>
-              <option value="Wellness Center">Wellness Center</option>
-            </select>
-          </label>
-        </div>
-        <div class="form-group"><button>Submit</button></div>
+        <label>Phone</label>
+        <input type="tel" id="phone" class="input" placeholder="864-597-4000" />
+
+        <label>Cell (Optional)</label>
+        <input type="tel" id="cell" class="input" placeholder="123-456-7890" />
+
+        <label>Fax (Optional)</label>
+        <input type="tel" id="fax" class="input" placeholder="864-597-4000" />
+
+        <label>Web</label>
+        <input
+          type="url"
+          id="web"
+          class="input"
+          placeholder="Enter your website URL."
+          value="https://www.wofford.edu"
+        />
+
+        <label>Department</label>
+        <select id="department">
+          <option value="Academic Affairs">Academic Affairs</option>
+          <option value="Accounting, Business, and Finance">
+            Accounting, Business, and Finance
+          </option>
+          <option value="Admission">Admission</option>
+          <option value="Advancement">Advancement</option>
+          <option value="Alumni">Alumni</option>
+          <option value="Art and Art History">Art and Art History</option>
+          <option value="Athletics">Athletics</option>
+          <option value="Biology">Biology</option>
+          <option value="Bookstore">Bookstore</option>
+          <option value="Business Office">Business Office</option>
+          <option value="Campus Ministry">Campus Ministry</option>
+          <option value="Campus Post Office">Campus Post Office</option>
+          <option value="Campus Safety">Campus Safety</option>
+          <option value="Career Center">Career Center</option>
+          <option value="Center for Community-Based Learning">
+            Center for Community-Based Learning
+          </option>
+          <option value="Center for Innovation and Learning">
+            Center for Innovation and Learning
+          </option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Division of Campus Life and Student Development">
+            Division of Campus Life and Student Development
+          </option>
+          <option value="Economics">Economics</option>
+          <option value="Education">Education</option>
+          <option value="English">English</option>
+          <option value="Environmental Studies">Environmental Studies</option>
+          <option value="Facilities">Facilities</option>
+          <option value="Financial Aid">Financial Aid</option>
+          <option value="Government and International Affairs">
+            Government and International Affairs
+          </option>
+          <option value="History">History</option>
+          <option value="Humanities">Humanities</option>
+          <option value="Institutional Research">Institutional Research</option>
+          <option value="International Programs">International Programs</option>
+          <option value="Liberty Fellowship">Liberty Fellowship</option>
+          <option value="Library">Library</option>
+          <option value="Lifelong Learning at Wofford">
+            Lifelong Learning at Wofford
+          </option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Military Science">Military Science</option>
+          <option value="Modern Languages, Literatures, and Cultures">
+            Modern Languages, Literatures, and Cultures
+          </option>
+          <option value="Music">Music</option>
+          <option value="Office of Entrepreneurship and Innovation">
+            Office of Entrepreneurship and Innovation
+          </option>
+          <option value="Office of Marketing and Communications">
+            Office of Marketing and Communications
+          </option>
+          <option value="Office of the President">
+            Office of the President
+          </option>
+          <option value="Office of the Provost">Office of the Provost</option>
+          <option value="Office of the Registrar">
+            Office of the Registrar
+          </option>
+          <option value="Philosophy">Philosophy</option>
+          <option value="Physics">Physics</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Religion">Religion</option>
+          <option value="Sociology and Anthropology">
+            Sociology and Anthropology
+          </option>
+          <option value="Theatre">Theatre</option>
+          <option value="Wellness Center">Wellness Center</option>
+        </select>
       </form>
+      <div id="result"></div>
     </div>
     <script src="index.js"></script>
   </body>
