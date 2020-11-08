@@ -1,7 +1,7 @@
 const emailSignForm = document.forms["form"];
 
 // Form submission
-emailSignForm.addEventListener("keyup", () => {
+emailSignForm.addEventListener("input", () => {
   const fullName = emailSignForm.querySelector("#fullName").value;
   const title = emailSignForm
     .querySelector("#title")
@@ -74,4 +74,4 @@ emailSignForm.addEventListener("keyup", () => {
 // 1. Add footer
 // 2. Make header/footer responsive (header font isn't an absolute match)
 // 3. Add https:// to web href
-// 4. Push changes to github
+// 4. Make result copyable
