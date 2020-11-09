@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Email Signature</title>
+    <meta
+    name="description"
+    content="Create a personalized signature to use on mobile devices and desktops."
+  />
+  <meta property="og:title" content="Wofford College | Email Signature" />
+  <meta
+    property="og:url"
+    content="https://form-results.netlify.app/"
+  />
+  <meta
+    property="og:description"
+    content="Create a personalized signature to use on mobile devices and desktops."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <title>Wofford College | Email Signature</title>
+  <link rel="icon" href="https://www.wofford.edu/Wofford.edu/Images/site/wofford-logos-and-marks/favicon.ico" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="nav-desktop">
         <div class="logo">
           <a href="https://www.wofford.edu/"
             ><img
@@ -28,6 +42,35 @@
           </li>
           <li><a href="https://woffordterriers.com/">Athletics</a></li>
         </ul>
+      </nav>
+      <nav class="nav-mobile">
+        <button class="menu">
+          <div class="icon-bar"></div>
+          <div class="icon-bar"></div>
+          <div class="icon-bar"></div>
+        </button>
+        <div class="navbar">
+          
+          <div class="mobile-logo">
+          <a href="https://www.wofford.edu/"
+            ><img
+              src="https://www.wofford.edu/Wofford.edu/Images/development/logo-stacked.png"
+              alt="Wofford logo"
+          /></a>
+        </div>
+       
+        <ul class="nav-mobile-links hidden">
+          <li><a href="https://www.wofford.edu/about">About</a></li>
+          <li><a href="https://www.wofford.edu/academics">Academics</a></li>
+          <li><a href="https://www.wofford.edu/admission">Admission</a></li>
+          <li>
+            <a href="https://www.wofford.edu/student-experiences"
+              >Student Experiences</a
+            >
+          </li>
+          <li><a href="https://woffordterriers.com/">Athletics</a></li>
+        </ul>
+      </div>
       </nav>
     </header>
     <div class="container">
@@ -174,9 +217,94 @@
           <option value="Wellness Center">Wellness Center</option>
         </select>
       </form>
-      <p>Click below to copy to your clipboard.</p>
-      <div id="result" class="result"></div>
+      <div class="copy"></div>
+      <div id="result" class="result">Results are empty. Try filling out an input.</div>
     </div>
+
+    <footer>
+      
+        <ul class="contact-links">
+          <li>
+            <a href="https://goo.gl/maps/ZcEbCWedKPo"
+              ><div>429 North Church Street</div><div>Spartanburg, SC</div><div>29303-3663</div></a
+            >
+          </li>
+          <li>
+            <a href="https://connect.wofford.edu/myWofford/about/contact.aspx"
+              >Email</a
+            >
+            | <a href="tel:864-597-4000">864-597-4000</a>
+          </li>
+          <li>
+            <a href="https://www.wofford.edu/about/privacypolicy"
+              >Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a href="https://www.wofford.edu/administration/ada-compliance"
+              >ADA Compliance/Accessibility</a
+            >
+          </li>
+          <li>
+            <a href="https://www.wofford.edu/administration/title-ix"
+              >Title IX/Sexual Harassment</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.wofford.edu/administration/non-discrimination-statement"
+              >Non-Discrimination Statement</a
+            >
+          </li>
+          <li><a href="https://www.wofford.edu/sitemap">Sitemap</a></li>
+        </ul>
+     
+        <ul class="primary-links">
+          <li><a href="https://www.wofford.edu/about">About</a></li>
+          <li><a href="https://www.wofford.edu/academics">Academics</a></li>
+          <li><a href="https://www.wofford.edu/admission">Admission</a></li>
+          <li>
+            <a href="https://www.wofford.edu/student-experiences"
+              >Student Experiences</a
+            >
+          </li>
+          <li><a href="https://woffordterriers.com/">Athletics</a></li>
+        </ul>
+   
+        <ul class="secondary-links">
+          <li><a href="https://www.wofford.edu/admission/apply">Apply</a></li>
+          <li>
+            <a href="https://www.wofford.edu/advancement/give-to-wofford"
+              >Give</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.wofford.edu/administration/human-resources/employment-opportunities"
+              >Employment</a
+            >
+          </li>
+          <li>
+            <a href="https://www.wofford.edu/academics/library"
+              >Sandor Teszler Library</a
+            >
+          </li>
+        </ul>
+   
+        <ul class="secondary-links">
+          <li><a href="https://my.wofford.edu/">myWofford</a></li>
+          <li>
+            <a href="https://www.wofford.edu/about/news"
+              >News + Wofford Today</a
+            >
+          </li>
+          <li><a href="https://www.wofford.edu/admission/visit">Visit</a></li>
+          <li>
+            <a href="https://www.wofford.edu/administration">Administration</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>

@@ -81,17 +81,33 @@ emailSignForm.addEventListener("input", () => {
   `;
 });
 
+// Copy note
+const copy = document.querySelector(".copy");
+window.innerWidth < 992
+  ? (copy.textContent = "Select all to copy to your clipboard.")
+  : (copy.textContent = "Click below to copy to your clipboard.");
+
+// Copy to clipboard
 const copyToClip = () => {
   let range = document.createRange();
   range.selectNode(result);
-  window.getSelection().removeAllRanges(); // clear current selection
-  window.getSelection().addRange(range); // to select text
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
 };
 
 result.addEventListener("click", () => {
   copyToClip();
+});
+
+// Mobile menu
+const menu = document.querySelector(".menu");
+const navMobileLinks = document.querySelector(".nav-mobile-links");
+
+menu.addEventListener("click", () => {
+  navMobileLinks.classList.toggle("hidden");
+  menu.classList.toggle("close");
 });
 
 // TODO
