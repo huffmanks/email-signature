@@ -24,7 +24,7 @@ a {
 }
 
 form {
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
   padding: 1rem 0;
 }
 
@@ -107,7 +107,7 @@ nav ul li:not(:last-of-type) {
 nav ul li a {
   color: #2d2d2d;
   font-family: "Oswald", sans-serif;
-  font-size: 1.15em;
+  font-size: 1.15rem;
   line-height: 20px;
   text-transform: uppercase;
   padding-bottom: 2.5rem;
@@ -128,26 +128,33 @@ nav ul li a:hover {
 
 .name {
   color: #8a6e4b;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .title {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
 }
 
 .contact {
-  font-size: 0.85rem;
+  font-size: 14px;
 }
 
 .address {
   color: #8a6e4b;
-  font-size: 0.85rem;
+  font-size: 14px;
 }
 
-.results {
-  margin-top: 2rem;
+.result {
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.result:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  padding: 1.5rem;
 }
 
 .invalid {

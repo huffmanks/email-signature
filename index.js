@@ -1,6 +1,6 @@
 const emailSignForm = document.forms["form"];
 
-// Form submission
+// Form input values
 emailSignForm.addEventListener("input", () => {
   const fullName = emailSignForm.querySelector("#fullName").value;
   const title = emailSignForm
@@ -14,7 +14,6 @@ emailSignForm.addEventListener("input", () => {
   const department = emailSignForm.querySelector("#department").value;
 
   // Form results HTML
-  const container = document.querySelector(".container");
   const result = document.querySelector("#result");
 
   result.innerHTML = `
@@ -59,7 +58,20 @@ emailSignForm.addEventListener("input", () => {
         }
         <br />
         Web:
-        <a href="${web}">${web}</a>
+        <a href=" ${
+          web.includes("https://") || web.includes("http://")
+            ? web
+            : `http://${web}`
+        }">
+        ${
+          web === ""
+            ? ""
+            : web.includes("https://")
+            ? web.slice(8)
+            : web.includes("http://")
+            ? web.slice(7)
+            : web
+        }</a>
       </p>
       <div class="address">
         Wofford College <br />
@@ -67,11 +79,21 @@ emailSignForm.addEventListener("input", () => {
         121 College St. Spartanburg, S.C. 29303
       </div>
   `;
-  container.appendChild(result);
+});
+
+const copyToClip = () => {
+  let range = document.createRange();
+  range.selectNode(result);
+  window.getSelection().removeAllRanges(); // clear current selection
+  window.getSelection().addRange(range); // to select text
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+};
+
+result.addEventListener("click", () => {
+  copyToClip();
 });
 
 // TODO
 // 1. Add footer
 // 2. Make header/footer responsive (header font isn't an absolute match)
-// 3. Add https:// to web href
-// 4. Make result copyable
