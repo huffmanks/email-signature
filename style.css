@@ -72,6 +72,8 @@ hr {
   border-top: 3px double #8a6e4b;
   color: #fff;
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 hr:after {
   content: "&";
