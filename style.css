@@ -65,6 +65,24 @@ textarea {
   height: 94px;
 }
 
+hr {
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: 3px double #8a6e4b;
+  color: #fff;
+  text-align: center;
+}
+hr:after {
+  content: "&";
+  display: inline-block;
+  position: relative;
+  top: -1rem;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  background: #8a6e4b;
+}
+
 /* Navigation */
 header {
   position: sticky;
@@ -194,7 +212,7 @@ header {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 70px 30px 30px 75px;
+  padding: 70px 30px 30px;
   background-color: #f0efef;
   list-style: none;
 }
@@ -202,6 +220,10 @@ header {
 .nav-mobile-links li {
   padding: 2.5rem 0;
   text-align: center;
+}
+
+.nav-mobile-links li:last-of-type {
+  padding: 2rem 0 2.5rem;
 }
 
 .nav-mobile-links li a {
@@ -288,7 +310,7 @@ footer ul {
   margin-top: 2rem;
   padding: 1rem;
   list-style: none;
-  line-height: 1.1rem;
+  line-height: 1.5rem;
 }
 
 .contact-links li,
@@ -309,6 +331,12 @@ footer ul {
 .primary-links li,
 .secondary-links li {
   margin-bottom: 1.5rem;
+}
+
+.contact-links li,
+.contact-links li a,
+.contact-links li a div {
+  font-size: 1rem;
 }
 
 .contact-links li,
