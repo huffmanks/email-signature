@@ -109,7 +109,3 @@ menu.addEventListener("click", () => {
   navMobileLinks.classList.toggle("hidden");
   menu.classList.toggle("close");
 });
-
-// TODO
-// 1. Add footer
-// 2. Make header/footer responsive (header font isn't an absolute match)
