@@ -53,6 +53,10 @@ select {
   border-radius: 0 0 4px 4px;
 }
 
+#department {
+  height: 58px; /* For Safari */
+}
+
 input:focus,
 textarea:focus,
 select:focus {
